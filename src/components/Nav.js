@@ -1,8 +1,10 @@
+import { NavLink } from "react-router-dom";
+
 import { Fragment } from "react";
 import { Disclosure } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon, HeartIcon } from "@heroicons/react/outline";
 
-const navigation = ["Portal", "Tentang Saya"];
+const navigation = ["Projects", "About"];
 
 function Nav() {
   return (
@@ -23,21 +25,31 @@ function Nav() {
                       itemIdx === 0 ? (
                         <Fragment key={item}>
                           {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                          <a
-                            href="#"
-                            className="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-normal no-underline"
-                          >
-                            {item}
-                          </a>
+
+                          {
+                            <NavLink
+                              to={{
+                                pathname: "/",
+                              }}
+                              exact={true}
+                              className="text-gray-300 hover:bg-gray-700 hover:text-white  no-underline "
+                              activeClassName="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-normal no-underline"
+                            >
+                              {item}
+                            </NavLink>
+                          }
                         </Fragment>
                       ) : (
-                        <a
+                        <NavLink
                           key={item}
-                          href="#"
-                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-normal no-underline"
+                          to={{
+                            pathname: "/about",
+                          }}
+                          className="text-gray-300 hover:bg-gray-700 hover:text-white  no-underline"
+                          activeClassName="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-normal no-underline"
                         >
                           {item}
-                        </a>
+                        </NavLink>
                       )
                     )}
                   </div>
@@ -71,21 +83,28 @@ function Nav() {
                 itemIdx === 0 ? (
                   <Fragment key={item}>
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a
-                      href="#"
+
+                    <NavLink
+                      to={{
+                        pathname: "/",
+                      }}
                       className="bg-gray-500 text-white block px-3 py-2 rounded-md text-base font-medium no-underline"
+                      activeClassName="bg-gray-900 text-white"
                     >
                       {item}
-                    </a>
+                    </NavLink>
                   </Fragment>
                 ) : (
-                  <a
+                  <NavLink
                     key={item}
-                    href="#"
+                    to={{
+                      pathname: "/about",
+                    }}
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline"
+                    activeClassName="bg-gray-900 text-white"
                   >
                     {item}
-                  </a>
+                  </NavLink>
                 )
               )}
             </div>
