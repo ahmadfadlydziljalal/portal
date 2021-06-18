@@ -17,9 +17,9 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "NODE_ENV=production npm run build:css && craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
