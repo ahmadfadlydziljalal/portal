@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <>
-      <article className="mt-8 text-gray-500 leading-7 tracking-wider">
+      <article className="mt-8 text-gray-100 leading-7 tracking-wider">
         <p className="font-bold">Hi, Saya Dzil. </p>
         <p>
           Raya Kreasi adalah sebuah unit usaha untuk membantu sponsor utama Kami
