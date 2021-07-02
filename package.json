@@ -1,6 +1,7 @@
 {
   "name": "portals",
   "version": "0.1.0",
+  "homepage": "https://rayakreasi.xyz",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.2.0",
@@ -17,7 +18,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "NODE_ENV=production npm run build:css && craco build",
+    "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
