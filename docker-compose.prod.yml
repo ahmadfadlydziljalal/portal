@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  # ReactJS Service
+  app:
+    image: "${REGISTRY_HOST}/tms-portal"
+    container_name: tms-portal
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    volumes:
+      - "./:/app"
+    stdin_open: true
+    ports:
+      - ${PRODUCTION_PORT}:80
+    env_file:
+      - .env
