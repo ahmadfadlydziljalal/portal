@@ -2,7 +2,6 @@ import React from "react";
 import Card from "../components/Card";
 
 function Home() {
-  
   const cards = {
     akun: {
       background: "bg-yellow-100",
@@ -19,6 +18,14 @@ function Home() {
       description:
         "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
       tags: ["#humanResource", "#absensi"],
+    },
+    dirut: {
+      background: "bg-green-300",
+      title: "SI DIRUT",
+      url: "https://dirut.rayakreasi.xyz/",
+      description:
+        "Sistem Informasi untuk tracking case Team Dirut Tresnamuda Group",
+      tags: ["#tracking", "#case", "#problem-solving"],
     },
   };
 
