@@ -5,11 +5,11 @@ function Home() {
   const cards = {
     akun: {
       background: "bg-yellow-100",
-      title: "SI AKUN",
-      url: "https://akunting.rayakreasi.xyz/",
+      title: "SI MKT",
+      url: "https://mkt.rayakreasi.xyz/",
       description:
-        "Sistem Informasi untuk pengelolaan transaksi keuangan menjadi LaporanKeuangan yang dibutuhkan perusahaan / unit usaha.",
-      tags: ["#akunting", "#pembukuan"],
+        "SIMKT adalah singkatan dari Sistem Informasi Marketing, dibuat untuk membantu Proses Bisnis di internal Departemen Sales dan Marketing - TMS GROUP. ",
+      tags: ["#marketing", "#sales"],
     },
     hrd: {
       background: "bg-white",
@@ -18,14 +18,6 @@ function Home() {
       description:
         "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
       tags: ["#humanResource", "#absensi"],
-    },
-    dirut: {
-      background: "bg-green-300",
-      title: "SI DIRUT",
-      url: "https://dirut.rayakreasi.xyz/",
-      description:
-        "Sistem Informasi untuk tracking case Team Dirut Tresnamuda Group",
-      tags: ["#tracking", "#case", "#problem-solving"],
     },
   };
 
