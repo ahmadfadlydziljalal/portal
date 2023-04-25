@@ -3,7 +3,7 @@ import Card from "../components/Card";
 
 function Home() {
   const cards = {
-    akun: {
+    mkt: {
       background: "bg-yellow-100",
       title: "SI MKT",
       url: "https://mkt.rayakreasi.xyz/",
@@ -18,6 +18,14 @@ function Home() {
       description:
         "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
       tags: ["#humanResource", "#absensi"],
+    },
+    ism: {
+      background: "bg-red-300",
+      title: "SI ISM",
+      url: "https://ism.rayakreasi.xyz/",
+      description:
+          "Sistem Informasi untuk ISM. International Safety Management Code adalah standar Internasional manajemen keselamatan dalam pengoperasian kapal serta upaya pencegahan/pengendalian pencemaran lingkungan.",
+      tags: ["#ism", "#ism-code"],
     },
   };
 
