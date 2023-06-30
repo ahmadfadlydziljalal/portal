@@ -5,6 +5,5 @@ COPY yarn.lock ./
 RUN yarn install --frozen-lockfile
 COPY . .
 RUN yarn build
-
 FROM nginx:1.18.0-alpine AS server
 COPY --from=builder ./app/build /usr/share/nginx/html
