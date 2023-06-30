@@ -1,0 +1,19 @@
+name: CI - CD
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  run-composer-and-docker:
+    name: Continuous integration & Continuous Deployment
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Install NodeJS
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache : 'yarn'
