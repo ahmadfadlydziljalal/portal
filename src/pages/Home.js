@@ -11,6 +11,7 @@ function Home() {
         "SIMKT adalah singkatan dari Sistem Informasi Marketing, dibuat untuk membantu Proses Bisnis di internal Departemen Sales dan Marketing - TMS GROUP. ",
       tags: ["#marketing", "#sales"],
     },
+
     hrd: {
       background: "bg-white",
       title: "SI HRD",
@@ -19,6 +20,7 @@ function Home() {
         "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
       tags: ["#humanResource", "#absensi"],
     },
+
     ism: {
       background: "bg-red-300",
       title: "SI ISM",
@@ -26,6 +28,15 @@ function Home() {
       description:
           "Sistem Informasi untuk ISM. International Safety Management Code adalah standar Internasional manajemen keselamatan dalam pengoperasian kapal serta upaya pencegahan/pengendalian pencemaran lingkungan.",
       tags: ["#ism", "#ism-code"],
+    },
+
+    my_notes: {
+      background: "bg-green-300",
+      title: "My Notes",
+      url: "https://my-notes.rayakreasi.xyz/",
+      description:
+          "My Notes adalah sebuah platform project manajemen.",
+      tags: ["#Reminder", "#my-notes"],
     },
   };
 
