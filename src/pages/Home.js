@@ -32,10 +32,10 @@ function Home() {
 
     my_notes: {
       background: "bg-green-300",
-      title: "My Notes",
+      title: "MyNotes",
       url: "https://my-notes.rayakreasi.xyz/",
       description:
-          "My Notes adalah sebuah platform project manajemen.",
+          "My Notes adalah sebuah platform Manajemen Project, dimana sebelumnya MyNotes adalah submodule di Sistem Manajemen Request IT",
       tags: ["#Reminder", "#my-notes"],
     },
   };
