@@ -3,9 +3,27 @@ import Card from "../components/Card";
 
 function Home() {
   const cards = {
+    tms: {
+      background: "bg-red-600",
+      title: "Website PT. Pelayaran Tresnamuda Sejati",
+      url: "https://tresnamuda.co.id",
+      description:
+        "TMS Lines is have 35 years experiences with track record in shipping shows by the major principals presentation such as Wan Hai Lines, Interasia Lines, New Pacific Papua New Guinea Trades, and many more. ",
+      tags: ["#tresnamuda", "#pelayaran", "#TMS"],
+    },
+
+    ift: {
+      background: "bg-pink-200",
+      title: "IFT Warehouse System",
+      url: "https://ift.dzil.my.id",
+      description:
+        "Warehouse, Quotation manajemen sistem untuk PT. Indo Formosa Trading Jakarta.",
+      tags: ["#indoformosa", "#Trading", "#IFT"],
+    },
+
     mkt: {
       background: "bg-yellow-100",
-      title: "SI MKT",
+      title: "SIMKT",
       url: "https://mkt.rayakreasi.xyz/",
       description:
         "SIMKT adalah singkatan dari Sistem Informasi Marketing, dibuat untuk membantu Proses Bisnis di internal Departemen Sales dan Marketing - TMS GROUP. ",
@@ -14,7 +32,7 @@ function Home() {
 
     hrd: {
       background: "bg-white",
-      title: "SI HRD",
+      title: "SIHRD",
       url: "https://hrd.rayakreasi.xyz/",
       description:
         "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
@@ -23,10 +41,10 @@ function Home() {
 
     ism: {
       background: "bg-red-300",
-      title: "SI ISM",
+      title: "SIISM",
       url: "https://ism.rayakreasi.xyz/",
       description:
-          "Sistem Informasi untuk ISM. International Safety Management Code adalah standar Internasional manajemen keselamatan dalam pengoperasian kapal serta upaya pencegahan/pengendalian pencemaran lingkungan.",
+        "Sistem Informasi untuk ISM. International Safety Management Code adalah standar Internasional manajemen keselamatan dalam pengoperasian kapal serta upaya pencegahan/pengendalian pencemaran lingkungan.",
       tags: ["#ism", "#ism-code"],
     },
 
@@ -35,8 +53,17 @@ function Home() {
       title: "MyNotes",
       url: "https://my-notes.rayakreasi.xyz/",
       description:
-          "My Notes adalah sebuah platform Manajemen Project, dimana sebelumnya MyNotes adalah submodule di Sistem Manajemen Request IT",
+        "My Notes adalah sebuah platform Manajemen Project, dimana sebelumnya MyNotes adalah submodule di Sistem Manajemen Request IT",
       tags: ["#Reminder", "#my-notes"],
+    },
+
+    sifaktur: {
+      background: "bg-purple-100",
+      title: "SIFAKTUR",
+      url: "https://faktur.tresnamuda.co.id/",
+      description:
+        "SIFAKTUR adalah Sistem Informasi untuk customer TMS-GROUP untuk pengambilan faktur pajak secara online.",
+      tags: ["#pajak", "#faktur", "#ppn"],
     },
   };
 
