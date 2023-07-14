@@ -4,7 +4,7 @@ import Card from "../components/Card";
 function Home() {
   const cards = {
     tms: {
-      background: "bg-red-600",
+      background: "bg-yellow-200",
       title: "Website PT. Pelayaran Tresnamuda Sejati",
       url: "https://tresnamuda.co.id",
       description:
@@ -60,7 +60,7 @@ function Home() {
     sifaktur: {
       background: "bg-purple-100",
       title: "SIFAKTUR",
-      url: "https://faktur.tresnamuda.co.id/",
+      url: "https://na-konsultan.com/",
       description:
         "SIFAKTUR adalah Sistem Informasi untuk customer TMS-GROUP untuk pengambilan faktur pajak secara online.",
       tags: ["#pajak", "#faktur", "#ppn"],
