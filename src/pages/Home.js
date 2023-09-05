@@ -68,7 +68,7 @@ function Home() {
 
     tech_dzil: {
       background: "bg-pink-500",
-      title: "SIFAKTUR",
+      title: "TECH DZIL",
       url: "https://dzil.my.id/",
       description: "Blog tentang pemrogaman, share pengalaman dan best practice milik penulis.",
       tags: ["#blog", "#tech", "#dzil"],
