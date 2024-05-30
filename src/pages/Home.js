@@ -66,6 +66,15 @@ function Home() {
       tags: ["#pajak", "#faktur", "#ppn"],
     },
 
+    sidocim: {
+      background: "bg-yellow-300",
+      title: "SIDOCIM",
+      url: "https://sidocim.rayakreasi.xyz",
+      description: "SIDOCIM adalah Sistem Informasi untuk customer TMS-GROUP untuk Departemen Import. " +
+          "Awalnya dibuat untuk pembayaran DO secara online oleh customer.",
+      tags: ["#sidocim", "#impor", "#do", "#do-online"],
+    },
+
     tech_dzil: {
       background: "bg-pink-500",
       title: "TECH DZIL",
