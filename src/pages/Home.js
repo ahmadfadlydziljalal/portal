@@ -82,6 +82,14 @@ function Home() {
       description: "Blog tentang pemrogaman, share pengalaman dan best practice milik penulis.",
       tags: ["#blog", "#tech", "#dzil"],
     },
+
+    jp_finance: {
+      background: "bg-blue-500",
+      title: "JP Finance",
+      url: "https://jp.dzil.my.id/",
+      description: "Sistem pencatatan transaksi keuangan untuk Toko Jameson Permai Sunter, Jakarta Utara",
+      tags: ["#blog", "#tech", "#dzil"],
+    },
   };
 
   return (
