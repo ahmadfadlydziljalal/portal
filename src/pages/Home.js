@@ -12,6 +12,16 @@ function Home() {
       tags: ["#tresnamuda", "#pelayaran", "#TMS"],
     },
 
+
+    bi_tms: {
+      background: "bg-purple-300",
+      title: "BI-TMS",
+      url: "https://bi-tms.rayakreasi.xyz",
+      description:
+          "Business Intelligence System. Web Scrapping, merging, or anything about data processing here. ",
+      tags: ["#BI", "#Data", "#TMS"],
+    },
+
     ift: {
       background: "bg-pink-200",
       title: "IFT Warehouse System",
