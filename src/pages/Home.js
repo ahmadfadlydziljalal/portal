@@ -16,7 +16,7 @@ function Home() {
     bi_tms: {
       background: "bg-purple-300",
       title: "BI-TMS",
-      url: "https://bi-tms.rayakreasi.xyz",
+      url: "http://bi.rayakreasi.xyz",
       description:
           "Business Intelligence System. Web Scrapping, merging, or anything about data processing here. ",
       tags: ["#BI", "#Data", "#TMS"],
