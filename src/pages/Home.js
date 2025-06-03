@@ -95,10 +95,10 @@ function Home() {
 
     jp_finance: {
       background: "bg-blue-500",
-      title: "JP Finance",
-      url: "https://jp.dzil.my.id/",
-      description: "Sistem pencatatan transaksi keuangan untuk Toko Jameson Permai Sunter, Jakarta Utara",
-      tags: ["#blog", "#tech", "#dzil"],
+      title: "Tsurumaru Logistics Indonesia",
+      url: "https://backend-tsurumaru.rayakreasi.xyz",
+      description: "Web app untuk proses bisnis milik Tsurumaru Logistic Indonesia",
+      tags: ["#tsurumaru", "#quotation", "#general-cargo"],
     },
   };
 
