@@ -51,11 +51,11 @@ function Home() {
 
     ism: {
       background: "bg-red-300",
-      title: "SIISM",
-      url: "https://ism.rayakreasi.xyz/",
+      title: "Certification",
+      url: "https://certification.rayakreasi.xyz/",
       description:
-        "Sistem Informasi untuk ISM. International Safety Management Code adalah standar Internasional manajemen keselamatan dalam pengoperasian kapal serta upaya pencegahan/pengendalian pencemaran lingkungan.",
-      tags: ["#ism", "#ism-code"],
+        "Sistem Informasi untuk management certification milik TMS GROUP, seperti ISM-CODE, ISO-9001, dan lain-lain.",
+      tags: ["#ism", "#ism-code", "#iso-9001"],
     },
 
     my_notes: {
