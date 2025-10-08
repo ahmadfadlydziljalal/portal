@@ -5,6 +5,7 @@ function Home() {
   const cards = {
     tms: {
       background: "bg-yellow-200",
+      textColor: "text-dark",
       title: "Website PT. Pelayaran Tresnamuda Sejati",
       url: "https://tresnamuda.co.id",
       description:
@@ -15,6 +16,7 @@ function Home() {
 
     bi_tms: {
       background: "bg-purple-300",
+      textColor: "text-dark",
       title: "BI-TMS",
       url: "http://bi.rayakreasi.xyz",
       description:
@@ -24,6 +26,7 @@ function Home() {
 
     ift: {
       background: "bg-pink-200",
+      textColor: "text-dark",
       title: "IFT Warehouse System",
       url: "https://ift.dzil.my.id",
       description:
@@ -33,6 +36,7 @@ function Home() {
 
     mkt: {
       background: "bg-yellow-100",
+      textColor: "text-dark",
       title: "SIMKT",
       url: "https://mkt.rayakreasi.xyz/",
       description:
@@ -42,6 +46,7 @@ function Home() {
 
     hrd: {
       background: "bg-white",
+      textColor: "text-dark",
       title: "SIHRD",
       url: "https://hrd.rayakreasi.xyz/",
       description:
@@ -51,6 +56,7 @@ function Home() {
 
     ism: {
       background: "bg-red-300",
+      textColor: "text-dark",
       title: "Certification",
       url: "https://certification.rayakreasi.xyz/",
       description:
@@ -60,6 +66,7 @@ function Home() {
 
     my_notes: {
       background: "bg-green-300",
+      textColor: "text-dark",
       title: "MyNotes",
       url: "https://my-notes.rayakreasi.xyz/",
       description:
@@ -69,6 +76,7 @@ function Home() {
 
     sifaktur: {
       background: "bg-purple-100",
+      textColor: "text-dark",
       title: "SIFAKTUR",
       url: "https://na-konsultan.com/",
       description:
@@ -78,6 +86,7 @@ function Home() {
 
     sidocim: {
       background: "bg-yellow-300",
+      textColor: "text-dark",
       title: "SIDOCIM",
       url: "https://sidocim.rayakreasi.xyz",
       description: "SIDOCIM adalah Sistem Informasi untuk customer TMS-GROUP untuk Departemen Import. Fokusnya adalah D.O (Delivery Order) Online ke Customer dan Pelabuhan ",
@@ -86,6 +95,7 @@ function Home() {
 
     sidoxim: {
       background: "bg-red-800",
+      textColor: "text-white",
       title: "SIDOXIM",
       url: "https://sidoxim.rayakreasi.xyz",
       description: "SIDOXIM adalah Sistem Informasi untuk pengolahan dokumen kepabeanan (CUSTOM) a.k.a Bea Cukai, dan EXIM ",
@@ -94,6 +104,7 @@ function Home() {
 
     tech_dzil: {
       background: "bg-pink-500",
+      textColor: "text-white",
       title: "TECH DZIL",
       url: "https://dzil.my.id/",
       description: "Blog tentang pemrogaman, share pengalaman dan best practice milik penulis.",
@@ -102,6 +113,7 @@ function Home() {
 
     jp_finance: {
       background: "bg-blue-500",
+      textColor: "text-white",
       title: "Tsurumaru Logistics Indonesia",
       url: "https://backend-tsurumaru.rayakreasi.xyz",
       description: "Web app untuk proses bisnis milik Tsurumaru Logistic Indonesia",
