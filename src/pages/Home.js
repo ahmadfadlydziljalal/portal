@@ -80,9 +80,16 @@ function Home() {
       background: "bg-yellow-300",
       title: "SIDOCIM",
       url: "https://sidocim.rayakreasi.xyz",
-      description: "SIDOCIM adalah Sistem Informasi untuk customer TMS-GROUP untuk Departemen Import. " +
-          "Awalnya dibuat untuk pembayaran DO secara online oleh customer.",
+      description: "SIDOCIM adalah Sistem Informasi untuk customer TMS-GROUP untuk Departemen Import. Fokusnya adalah D.O (Delivery Order) Online ke Customer dan Pelabuhan ",
       tags: ["#sidocim", "#impor", "#do", "#do-online"],
+    },
+
+    sidoxim: {
+      background: "bg-red-800",
+      title: "SIDOXIM",
+      url: "https://sidoxim.rayakreasi.xyz",
+      description: "SIDOXIM adalah Sistem Informasi untuk pengolahan dokumen kepabeanan (CUSTOM) a.k.a Bea Cukai, dan EXIM ",
+      tags: ["#sidoxim", "#exim", "#bea-cukai", "#manifest"],
     },
 
     tech_dzil: {
