@@ -121,7 +121,7 @@ function Home() {
     },
 
     it_helpdesk: {
-      background: "bg-red-900",
+      background: "bg-purple-200",
       textColor: "text-white",
       title: "IT Helpdesk TMS GROUP",
       url: "https://it.rayakreasi.xyz",
