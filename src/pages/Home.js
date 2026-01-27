@@ -119,6 +119,15 @@ function Home() {
       description: "Web app untuk proses bisnis milik Tsurumaru Logistic Indonesia",
       tags: ["#tsurumaru", "#quotation", "#general-cargo"],
     },
+
+    it_helpdesk: {
+      background: "bg-red-900",
+      textColor: "text-white",
+      title: "IT Helpdesk TMS GROUP",
+      url: "https://it.rayakreasi.xyz",
+      description: "Web app untuk proses bisnis IT Helpdesk TMS GROUP",
+      tags: ["#it", "#helpdesk", "#tms"],
+    },
   };
 
   return (
