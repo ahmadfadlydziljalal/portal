@@ -175,7 +175,7 @@ function Home() {
 
   return (
     <>
-      <div className="mb-8 rounded-2xl border border-gray-200 bg-white/90 shadow-sm backdrop-blur-sm">
+      <div className="mb-6 rounded-2xl border border-gray-200 bg-white/90 shadow-sm backdrop-blur-sm sm:mb-8">
         <div className="border-b border-gray-100 px-4 py-4 sm:px-6">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div>
@@ -221,12 +221,12 @@ function Home() {
             )}
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2.5">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                className={`rounded-full px-3.5 py-2 text-sm font-medium transition-all sm:px-4 ${
                   selectedCategory === cat.id
                     ? "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-md"
                     : "border border-gray-300 bg-white text-gray-700 hover:bg-gray-100"
@@ -242,7 +242,7 @@ function Home() {
 
       {/* Grid of Cards */}
       {filteredCards.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
           {filteredCards.map(([key, value]) => (
             <Card key={key} props={value} />
           ))}

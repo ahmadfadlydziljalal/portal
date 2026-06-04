@@ -8,7 +8,7 @@ const navigation = ["Projects", "About"];
 
 function Nav() {
   return (
-    <Disclosure as="nav" className="bg-white border-b border-gray-200 shadow-sm">
+    <Disclosure as="nav" className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
