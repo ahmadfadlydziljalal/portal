@@ -8,7 +8,7 @@ import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
-    <div className="bg-gray-900 flex flex-col min-h-screen ">
+    <div className="bg-gradient-to-br from-white via-blue-50 to-indigo-50 flex flex-col min-h-screen">
       <MainLayout>
         <Switch>
           <Route exact path="/" component={Home} />

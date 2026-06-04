@@ -8,14 +8,14 @@ const navigation = ["Projects", "About"];
 
 function Nav() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-white border-b border-gray-200 shadow-sm">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
-                <HeartIcon className="h-8 w-8 text-red-400" alt="Workflow" />
-                <p className="text-red-400 text-xl pl-2.5 font-bold">
+                <HeartIcon className="h-8 w-8 text-red-500" alt="Workflow" />
+                <p className="text-red-500 text-xl pl-2.5 font-bold">
                   Raya Kreasi
                 </p>
 
@@ -24,7 +24,7 @@ function Nav() {
                     {navigation.map((item, itemIdx) =>
                       itemIdx === 0 ? (
                         <Fragment key={item}>
-                          {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                          {/* Current: "bg-red-50 text-red-600", Default: "text-gray-600 hover:bg-gray-100 hover:text-gray-900" */}
 
                           {
                             <NavLink
@@ -32,8 +32,8 @@ function Nav() {
                                 pathname: "/",
                               }}
                               exact={true}
-                              className="text-gray-300 hover:bg-gray-700 hover:text-white  no-underline "
-                              activeClassName="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-normal no-underline"
+                              className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 no-underline"
+                              activeClassName="bg-red-50 text-red-600 px-3 py-2 rounded-md text-sm font-medium no-underline"
                             >
                               {item}
                             </NavLink>
@@ -45,8 +45,8 @@ function Nav() {
                           to={{
                             pathname: "/about",
                           }}
-                          className="text-gray-300 hover:bg-gray-700 hover:text-white  no-underline"
-                          activeClassName="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-normal no-underline"
+                          className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 no-underline"
+                          activeClassName="bg-red-50 text-red-600 px-3 py-2 rounded-md text-sm font-medium no-underline"
                         >
                           {item}
                         </NavLink>
@@ -57,7 +57,7 @@ function Nav() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-4 flex items-center md:ml-6">
-                  <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                  <button className="bg-white p-1 rounded-full text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-500">
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
@@ -65,7 +65,7 @@ function Nav() {
               </div>
               <div className="-mr-2 flex md:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                <Disclosure.Button className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -82,14 +82,14 @@ function Nav() {
               {navigation.map((item, itemIdx) =>
                 itemIdx === 0 ? (
                   <Fragment key={item}>
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                    {/* Current: "bg-red-50 text-red-600", Default: "text-gray-600 hover:bg-gray-100" */}
 
                     <NavLink
                       to={{
                         pathname: "/",
                       }}
-                      className="bg-gray-500 text-white block px-3 py-2 rounded-md text-base font-medium no-underline"
-                      activeClassName="bg-gray-900 text-white"
+                      className="bg-red-50 text-red-600 block px-3 py-2 rounded-md text-base font-medium no-underline"
+                      activeClassName="bg-red-100 text-red-700"
                     >
                       {item}
                     </NavLink>
@@ -100,8 +100,8 @@ function Nav() {
                     to={{
                       pathname: "/about",
                     }}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium no-underline"
-                    activeClassName="bg-gray-900 text-white"
+                    className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium no-underline"
+                    activeClassName="bg-red-50 text-red-600"
                   >
                     {item}
                   </NavLink>

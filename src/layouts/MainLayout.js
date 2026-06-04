@@ -8,9 +8,9 @@ export default function MainLayout({ children }) {
     <>
       <Nav />
       <Header />
-      <main class="flex-grow">
+      <main className="flex-grow">
         <section>
-          <div className="max-w-7xl mx-auto py-1 sm:px-6 lg:px-8 ">
+          <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             {children}
           </div>
         </section>

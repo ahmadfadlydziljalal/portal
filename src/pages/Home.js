@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import Card from "../components/Card";
+import { SearchIcon } from "@heroicons/react/outline";
 
 function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("semua");
+
   const cards = {
     tms: {
       background: "bg-yellow-200",
@@ -11,8 +15,8 @@ function Home() {
       description:
         "TMS Lines is have 35 years experiences with track record in shipping shows by the major principals presentation such as Wan Hai Lines, Interasia Lines, New Pacific Papua New Guinea Trades, and many more. ",
       tags: ["#tresnamuda", "#pelayaran", "#TMS"],
+      category: "operasional",
     },
-
 
     bi_tms: {
       background: "bg-purple-300",
@@ -20,8 +24,9 @@ function Home() {
       title: "BI-TMS",
       url: "http://bi.rayakreasi.xyz",
       description:
-          "Business Intelligence System. Web Scrapping, merging, or anything about data processing here. ",
+        "Business Intelligence System. Web Scrapping, merging, or anything about data processing here. ",
       tags: ["#BI", "#Data", "#TMS"],
+      category: "analytics",
     },
 
     ift: {
@@ -32,6 +37,7 @@ function Home() {
       description:
         "Warehouse, Quotation manajemen sistem untuk PT. Indo Formosa Trading Jakarta.",
       tags: ["#indoformosa", "#Trading", "#IFT"],
+      category: "operasional",
     },
 
     mkt: {
@@ -42,6 +48,7 @@ function Home() {
       description:
         "SIMKT adalah singkatan dari Sistem Informasi Marketing, dibuat untuk membantu Proses Bisnis di internal Departemen Sales dan Marketing - TMS GROUP. ",
       tags: ["#marketing", "#sales"],
+      category: "manajemen",
     },
 
     hrd: {
@@ -52,6 +59,7 @@ function Home() {
       description:
         "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
       tags: ["#humanResource", "#absensi"],
+      category: "manajemen",
     },
 
     ism: {
@@ -62,6 +70,7 @@ function Home() {
       description:
         "Sistem Informasi untuk management certification milik TMS GROUP, seperti ISM-CODE, ISO-9001, dan lain-lain.",
       tags: ["#ism", "#ism-code", "#iso-9001"],
+      category: "compliance",
     },
 
     my_notes: {
@@ -72,6 +81,7 @@ function Home() {
       description:
         "My Notes adalah sebuah platform Manajemen Project, dimana sebelumnya MyNotes adalah submodule di Sistem Manajemen Request IT",
       tags: ["#Reminder", "#my-notes"],
+      category: "produktivitas",
     },
 
     sifaktur: {
@@ -82,6 +92,7 @@ function Home() {
       description:
         "SIFAKTUR adalah Sistem Informasi untuk customer TMS-GROUP untuk pengambilan faktur pajak secara online.",
       tags: ["#pajak", "#faktur", "#ppn"],
+      category: "administrasi",
     },
 
     sidocim: {
@@ -91,6 +102,7 @@ function Home() {
       url: "https://sidocim.rayakreasi.xyz",
       description: "SIDOCIM adalah Sistem Informasi untuk customer TMS-GROUP untuk Departemen Import. Fokusnya adalah D.O (Delivery Order) Online ke Customer dan Pelabuhan ",
       tags: ["#sidocim", "#impor", "#do", "#do-online"],
+      category: "operasional",
     },
 
     sidoxim: {
@@ -100,6 +112,7 @@ function Home() {
       url: "https://sidoxim.rayakreasi.xyz",
       description: "SIDOXIM adalah Sistem Informasi untuk pengolahan dokumen kepabeanan (CUSTOM) a.k.a Bea Cukai, dan EXIM ",
       tags: ["#sidoxim", "#exim", "#bea-cukai", "#manifest"],
+      category: "operasional",
     },
 
     tech_dzil: {
@@ -109,6 +122,7 @@ function Home() {
       url: "https://dzil.my.id/",
       description: "Blog tentang pemrogaman, share pengalaman dan best practice milik penulis.",
       tags: ["#blog", "#tech", "#dzil"],
+      category: "eksternal",
     },
 
     jp_finance: {
@@ -118,6 +132,7 @@ function Home() {
       url: "https://backend-tsurumaru.rayakreasi.xyz",
       description: "Web app untuk proses bisnis milik Tsurumaru Logistic Indonesia",
       tags: ["#tsurumaru", "#quotation", "#general-cargo"],
+      category: "operasional",
     },
 
     it_helpdesk: {
@@ -127,15 +142,118 @@ function Home() {
       url: "https://it.rayakreasi.xyz",
       description: "Web app untuk proses bisnis IT Helpdesk TMS GROUP",
       tags: ["#it", "#helpdesk", "#tms"],
+      category: "support",
     },
   };
 
+  const categories = [
+    { id: "semua", label: "Semua Aplikasi", icon: "📋" },
+    { id: "operasional", label: "Operasional", icon: "⚙️" },
+    { id: "analytics", label: "Analytics", icon: "📊" },
+    { id: "manajemen", label: "Manajemen", icon: "👥" },
+    { id: "compliance", label: "Compliance", icon: "✓" },
+    { id: "produktivitas", label: "Produktivitas", icon: "🚀" },
+    { id: "administrasi", label: "Administrasi", icon: "📄" },
+    { id: "support", label: "Support", icon: "🛠️" },
+    { id: "eksternal", label: "Eksternal", icon: "🌐" },
+  ];
+
+  // Filter cards based on search and category
+  const filteredCards = useMemo(() => {
+    return Object.entries(cards).filter(([, card]) => {
+      const matchesSearch = 
+        card.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        card.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        card.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+
+      const matchesCategory = 
+        selectedCategory === "semua" || card.category === selectedCategory;
+
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchTerm, selectedCategory]);
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 px-3 md:px-0 lg:px-0">
-      {Object.entries(cards).map(([key, value]) => {
-        return <Card key={key} props={value} />;
-      })}
-    </div>
+    <>
+      <div className="mb-8 rounded-2xl border border-gray-200 bg-white/90 shadow-sm backdrop-blur-sm">
+        <div className="border-b border-gray-100 px-4 py-4 sm:px-6">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                Pilih aplikasi yang ingin dibuka
+              </h2>
+              <p className="mt-1 text-sm text-gray-600">
+                Gunakan pencarian atau filter kategori agar lebih cepat menemukan sistem yang dibutuhkan.
+              </p>
+            </div>
+
+            <div className="text-sm text-gray-600 lg:text-right">
+              Menampilkan <span className="font-semibold text-gray-900">{filteredCards.length}</span> dari <span className="font-semibold text-gray-900">{Object.keys(cards).length}</span> aplikasi
+            </div>
+          </div>
+        </div>
+
+        <div className="px-4 py-4 sm:px-6">
+          <div className="relative mb-4">
+            <SearchIcon className="absolute left-4 top-3.5 h-5 w-5 text-gray-500" />
+            <input
+              type="text"
+              placeholder="Cari aplikasi atau sistem..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full rounded-xl border border-gray-300 bg-gray-50 py-3 pl-12 pr-4 text-gray-900 placeholder-gray-500 transition-all focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-100"
+            />
+          </div>
+
+          <div className="mb-3 flex items-center justify-between">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-700">Kategori</h3>
+            {(searchTerm || selectedCategory !== "semua") && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchTerm("");
+                  setSelectedCategory("semua");
+                }}
+                className="text-sm font-medium text-red-600 hover:text-red-700"
+              >
+                Reset filter
+              </button>
+            )}
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                  selectedCategory === cat.id
+                    ? "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-md"
+                    : "border border-gray-300 bg-white text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                <span className="mr-2">{cat.icon}</span>
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Grid of Cards */}
+      {filteredCards.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredCards.map(([key, value]) => (
+            <Card key={key} props={value} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-12">
+          <p className="text-gray-700 text-lg mb-2">Tidak ada aplikasi yang ditemukan</p>
+          <p className="text-gray-600 text-sm">Coba ubah pencarian atau kategori Anda</p>
+        </div>
+      )}
+    </>
   );
 }
 
