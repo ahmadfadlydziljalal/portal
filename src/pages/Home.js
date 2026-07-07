@@ -1,15 +1,24 @@
-import React, { useState, useMemo } from "react";
-import Card from "../components/Card";
-import { SearchIcon } from "@heroicons/react/outline";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import AppIconLink from "../components/AppIconLink";
+import tmsIcon from "../assets/tms.ico";
+import iftIcon from "../assets/ift.ico";
+import simktIcon from "../assets/simkt.ico";
+import sihrdIcon from "../assets/sihrd.ico";
+import certificationIcon from "../assets/certification.ico";
+import myNotesIcon from "../assets/mynotes.ico";
+import sifakturIcon from "../assets/sifaktur.jpg";
+import itHelpdeskIcon from "../assets/it.ico";
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("semua");
+  const searchInputRef = useRef(null);
 
   const cards = {
     tms: {
-      background: "bg-yellow-200",
+      background: "bg-yellow-50",
       textColor: "text-dark",
+      shortTitle: "TMS Website",
+      icon: tmsIcon,
       title: "Website PT. Pelayaran Tresnamuda Sejati",
       url: "https://tresnamuda.co.id",
       description:
@@ -17,65 +26,71 @@ function Home() {
       tags: ["#tresnamuda", "#pelayaran", "#TMS"],
       category: "operasional",
     },
-
-    bi_tms: {
-      background: "bg-purple-300",
+    it_helpdesk: {
+      background: "bg-indigo-50",
       textColor: "text-dark",
-      title: "BI-TMS",
-      url: "http://bi.rayakreasi.xyz",
-      description:
-        "Business Intelligence System. Web Scrapping, merging, or anything about data processing here. ",
-      tags: ["#BI", "#Data", "#TMS"],
-      category: "analytics",
+      shortTitle: "IT Helpdesk",
+      icon: itHelpdeskIcon,
+      title: "IT Helpdesk TMS GROUP",
+      url: "https://it.rayakreasi.xyz",
+      description: "Web app untuk proses bisnis IT Helpdesk TMS GROUP",
+      tags: ["#it", "#helpdesk", "#tms"],
+      category: "support",
     },
 
     ift: {
-      background: "bg-pink-200",
+      background: "bg-pink-50",
       textColor: "text-dark",
+      shortTitle: "IFT Warehouse",
       title: "IFT Warehouse System",
+      icon: iftIcon,
       url: "https://ift.dzil.my.id",
       description:
         "Warehouse, Quotation manajemen sistem untuk PT. Indo Formosa Trading Jakarta.",
       tags: ["#indoformosa", "#Trading", "#IFT"],
       category: "operasional",
     },
-
     mkt: {
-      background: "bg-yellow-100",
+      background: "bg-yellow-50",
       textColor: "text-dark",
+      shortTitle: "SIMKT",
       title: "SIMKT",
+      icon: simktIcon,
       url: "https://mkt.rayakreasi.xyz/",
       description:
         "SIMKT adalah singkatan dari Sistem Informasi Marketing, dibuat untuk membantu Proses Bisnis di internal Departemen Sales dan Marketing - TMS GROUP. ",
       tags: ["#marketing", "#sales"],
       category: "manajemen",
     },
-
     hrd: {
-      background: "bg-white",
+      background: "bg-slate-50",
       textColor: "text-dark",
+      shortTitle: "SIHRD",
       title: "SIHRD",
+      icon: sihrdIcon,
       url: "https://hrd.rayakreasi.xyz/",
       description:
         "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
       tags: ["#humanResource", "#absensi"],
       category: "manajemen",
     },
-
     ism: {
-      background: "bg-red-300",
+      background: "bg-red-50",
       textColor: "text-dark",
+      shortTitle: "Certification",
       title: "Certification",
+      icon: certificationIcon,
       url: "https://certification.rayakreasi.xyz/",
       description:
         "Sistem Informasi untuk management certification milik TMS GROUP, seperti ISM-CODE, ISO-9001, dan lain-lain.",
       tags: ["#ism", "#ism-code", "#iso-9001"],
       category: "compliance",
     },
-
     my_notes: {
-      background: "bg-green-300",
+      background: "bg-green-50",
       textColor: "text-dark",
+      shortTitle: "MyNotes",
+      icon: myNotesIcon,
       title: "MyNotes",
       url: "https://my-notes.rayakreasi.xyz/",
       description:
@@ -83,10 +98,11 @@ function Home() {
       tags: ["#Reminder", "#my-notes"],
       category: "produktivitas",
     },
-
     sifaktur: {
-      background: "bg-purple-100",
+      background: "bg-purple-50",
       textColor: "text-dark",
+      shortTitle: "SIFAKTUR",
+      icon: sifakturIcon,
       title: "SIFAKTUR",
       url: "https://na-konsultan.com/",
       description:
@@ -94,157 +110,116 @@ function Home() {
       tags: ["#pajak", "#faktur", "#ppn"],
       category: "administrasi",
     },
-
     sidocim: {
-      background: "bg-yellow-300",
+      background: "bg-green-300",
       textColor: "text-dark",
+      shortTitle: "SIDOCIM",
       title: "SIDOCIM",
       url: "https://sidocim.rayakreasi.xyz",
       description: "SIDOCIM adalah Sistem Informasi untuk customer TMS-GROUP untuk Departemen Import. Fokusnya adalah D.O (Delivery Order) Online ke Customer dan Pelabuhan ",
       tags: ["#sidocim", "#impor", "#do", "#do-online"],
       category: "operasional",
     },
-
     sidoxim: {
-      background: "bg-red-800",
-      textColor: "text-white",
+      background: "bg-red-300",
+      textColor: "text-dark",
+      shortTitle: "SIDOXIM",
       title: "SIDOXIM",
       url: "https://sidoxim.rayakreasi.xyz",
       description: "SIDOXIM adalah Sistem Informasi untuk pengolahan dokumen kepabeanan (CUSTOM) a.k.a Bea Cukai, dan EXIM ",
       tags: ["#sidoxim", "#exim", "#bea-cukai", "#manifest"],
       category: "operasional",
     },
-
     tech_dzil: {
-      background: "bg-pink-500",
-      textColor: "text-white",
+      background: "bg-pink-300",
+      textColor: "text-dark",
+      shortTitle: "TECH DZIL",
       title: "TECH DZIL",
       url: "https://dzil.my.id/",
       description: "Blog tentang pemrogaman, share pengalaman dan best practice milik penulis.",
       tags: ["#blog", "#tech", "#dzil"],
       category: "eksternal",
     },
-
     jp_finance: {
-      background: "bg-blue-500",
-      textColor: "text-white",
+      background: "bg-blue-300",
+      textColor: "text-dark",
+      shortTitle: "Tsurumaru",
       title: "Tsurumaru Logistics Indonesia",
       url: "https://backend-tsurumaru.rayakreasi.xyz",
       description: "Web app untuk proses bisnis milik Tsurumaru Logistic Indonesia",
       tags: ["#tsurumaru", "#quotation", "#general-cargo"],
       category: "operasional",
     },
-
-    it_helpdesk: {
-      background: "bg-purple-200",
+    bi_tms: {
+      background: "bg-purple-300",
       textColor: "text-dark",
-      title: "IT Helpdesk TMS GROUP",
-      url: "https://it.rayakreasi.xyz",
-      description: "Web app untuk proses bisnis IT Helpdesk TMS GROUP",
-      tags: ["#it", "#helpdesk", "#tms"],
-      category: "support",
+      shortTitle: "BI-TMS",
+      title: "BI-TMS",
+      url: "http://bi.rayakreasi.xyz",
+      description:
+          "Business Intelligence System. Web Scrapping, merging, or anything about data processing here. ",
+      tags: ["#BI", "#Data", "#TMS"],
+      category: "analytics",
     },
   };
 
-  const categories = [
-    { id: "semua", label: "Semua Aplikasi", icon: "📋" },
-    { id: "operasional", label: "Operasional", icon: "⚙️" },
-    { id: "analytics", label: "Analytics", icon: "📊" },
-    { id: "manajemen", label: "Manajemen", icon: "👥" },
-    { id: "compliance", label: "Compliance", icon: "✓" },
-    { id: "produktivitas", label: "Produktivitas", icon: "🚀" },
-    { id: "administrasi", label: "Administrasi", icon: "📄" },
-    { id: "support", label: "Support", icon: "🛠️" },
-    { id: "eksternal", label: "Eksternal", icon: "🌐" },
-  ];
-
-  // Filter cards based on search and category
+  // Filter cards based on search term
   const filteredCards = useMemo(() => {
     return Object.entries(cards).filter(([, card]) => {
-      const matchesSearch = 
+      return (
         card.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         card.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        card.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-
-      const matchesCategory = 
-        selectedCategory === "semua" || card.category === selectedCategory;
-
-      return matchesSearch && matchesCategory;
+        card.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
     });
-  }, [searchTerm, selectedCategory]);
+  }, [searchTerm]);
+
+  useEffect(() => {
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleKeydown = (event) => {
+      const activeElement = document.activeElement;
+      const isEditableTarget =
+        activeElement &&
+        (activeElement.tagName === "INPUT" ||
+          activeElement.tagName === "TEXTAREA" ||
+          activeElement.isContentEditable);
+
+      if (event.key === "/" && !isEditableTarget && searchInputRef.current) {
+        event.preventDefault();
+        searchInputRef.current.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeydown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, []);
 
   return (
     <>
-      <div className="mb-6 rounded-2xl border border-gray-200 bg-white/90 shadow-sm backdrop-blur-sm sm:mb-8">
-        <div className="border-b border-gray-100 px-4 py-4 sm:px-6">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">
-                Pilih aplikasi yang ingin dibuka
-              </h2>
-              <p className="mt-1 text-sm text-gray-600">
-                Gunakan pencarian atau filter kategori agar lebih cepat menemukan sistem yang dibutuhkan.
-              </p>
-            </div>
-
-            <div className="text-sm text-gray-600 lg:text-right">
-              Menampilkan <span className="font-semibold text-gray-900">{filteredCards.length}</span> dari <span className="font-semibold text-gray-900">{Object.keys(cards).length}</span> aplikasi
-            </div>
-          </div>
-        </div>
-
-        <div className="px-4 py-4 sm:px-6">
-          <div className="relative mb-4">
-            <SearchIcon className="absolute left-4 top-3.5 h-5 w-5 text-gray-500" />
-            <input
-              type="text"
-              placeholder="Cari aplikasi atau sistem..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full rounded-xl border border-gray-300 bg-gray-50 py-3 pl-12 pr-4 text-gray-900 placeholder-gray-500 transition-all focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-100"
-            />
-          </div>
-
-          <div className="mb-3 flex items-center justify-between">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-700">Kategori</h3>
-            {(searchTerm || selectedCategory !== "semua") && (
-              <button
-                type="button"
-                onClick={() => {
-                  setSearchTerm("");
-                  setSelectedCategory("semua");
-                }}
-                className="text-sm font-medium text-red-600 hover:text-red-700"
-              >
-                Reset filter
-              </button>
-            )}
-          </div>
-
-          <div className="flex flex-wrap gap-2.5">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`rounded-full px-3.5 py-2 text-sm font-medium transition-all sm:px-4 ${
-                  selectedCategory === cat.id
-                    ? "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-md"
-                    : "border border-gray-300 bg-white text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                <span className="mr-2">{cat.icon}</span>
-                {cat.label}
-              </button>
-            ))}
-          </div>
-        </div>
+      <div className="mb-4 sm:mb-6">
+        <input
+          ref={searchInputRef}
+          type="text"
+          placeholder="Cari aplikasi atau sistem..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full rounded-full border border-gray-200 bg-gray-100 px-5 py-3 text-gray-900 placeholder-gray-500 transition-all focus:border-gray-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-gray-200"
+        />
       </div>
 
-      {/* Grid of Cards */}
+      {/* Grid of App Icons */}
       {filteredCards.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {filteredCards.map(([key, value]) => (
-            <Card key={key} props={value} />
+            <AppIconLink key={key} appKey={key} app={value} />
           ))}
         </div>
       ) : (
