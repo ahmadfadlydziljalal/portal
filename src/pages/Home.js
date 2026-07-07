@@ -38,6 +38,7 @@ function Home() {
       category: "support",
     },
 
+
     ift: {
       background: "bg-pink-50",
       textColor: "text-dark",
@@ -110,6 +111,18 @@ function Home() {
       tags: ["#pajak", "#faktur", "#ppn"],
       category: "administrasi",
     },
+    rkd_mobile: {
+      background: "bg-cyan-50",
+      textColor: "text-dark",
+      shortTitle: "RKD Mobile",
+      icon: "https://play-lh.googleusercontent.com/-T6ZqUFVY4AuUJ2139gci3j76caK1h9_veJhGYl8Vhm-iRXT7efphSwonfgVcnFfAwto4gbKn99dtLxohh1qVxw=w240-h480",
+      iconClassName: "h-11 w-11 object-cover object-center",
+      title: "RKD Mobile",
+      url: "https://play.google.com/store/apps/details?id=com.dzil.rkdmobile",
+      description: "Aplikasi Android RKD Mobile untuk akses layanan RKD via smartphone.",
+      tags: ["#android", "#mobile", "#rkd"],
+      category: "eksternal",
+    },
     sidocim: {
       background: "bg-green-300",
       textColor: "text-dark",
@@ -161,6 +174,7 @@ function Home() {
       tags: ["#BI", "#Data", "#TMS"],
       category: "analytics",
     },
+
   };
 
   // Filter cards based on search term

@@ -7,6 +7,7 @@ import {
   CogIcon,
   CubeIcon,
   DocumentTextIcon,
+  DeviceMobileIcon,
   GlobeAltIcon,
   OfficeBuildingIcon,
   SupportIcon,
@@ -50,6 +51,7 @@ const iconByAppKey = {
   tech_dzil: GlobeAltIcon,
   jp_finance: OfficeBuildingIcon,
   it_helpdesk: SupportIcon,
+  rkd_mobile: DeviceMobileIcon,
 };
 
 const iconByCategory = {
@@ -82,7 +84,7 @@ export default function AppIconLink({ app, appKey }) {
             src={app.icon}
             alt={app.title}
             style={{ mixBlendMode: "multiply" }}
-            className="h-9 w-9 object-contain opacity-95"
+            className={app.iconClassName || "h-9 w-9 object-contain opacity-95"}
           />
         ) : (
           <Icon className={`h-8 w-8 ${iconTextColor}`} />
