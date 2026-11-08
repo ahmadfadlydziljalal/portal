@@ -17,7 +17,6 @@ export default function About() {
           <p>Thanks & Regards,</p>
           <p>Dzil</p>
           <p>Email: dzil@tresnamuda.co.id; dziljalal1@gmail.com </p>
-          <p>Phone: +62 813 4949 5897</p>
         </footer>
       </article>
     </>

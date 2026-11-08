@@ -26,6 +26,33 @@ function Home() {
       tags: ["#tresnamuda", "#pelayaran", "#TMS"],
       category: "operasional",
     },
+
+    hrd: {
+      background: "bg-slate-50",
+      textColor: "text-dark",
+      shortTitle: "SIHRD",
+      title: "SIHRD",
+      icon: sihrdIcon,
+      url: "https://hrd.rayakreasi.xyz/",
+      description:
+        "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
+      tags: ["#humanResource", "#absensi"],
+      category: "manajemen",
+    },
+
+    mkt: {
+      background: "bg-yellow-50",
+      textColor: "text-dark",
+      shortTitle: "SIMKT",
+      title: "SIMKT",
+      icon: simktIcon,
+      url: "https://mkt.rayakreasi.xyz/",
+      description:
+        "SIMKT adalah singkatan dari Sistem Informasi Marketing, dibuat untuk membantu Proses Bisnis di internal Departemen Sales dan Marketing - TMS GROUP. ",
+      tags: ["#marketing", "#sales"],
+      category: "manajemen",
+    },
+
     it_helpdesk: {
       background: "bg-indigo-50",
       textColor: "text-dark",
@@ -38,6 +65,100 @@ function Home() {
       category: "support",
     },
 
+    ism: {
+      background: "bg-red-50",
+      textColor: "text-dark",
+      shortTitle: "Certification",
+      title: "Certification",
+      icon: certificationIcon,
+      url: "https://certification.rayakreasi.xyz/",
+      description:
+        "Sistem Informasi untuk management certification milik TMS GROUP, seperti ISM-CODE, ISO-9001, dan lain-lain.",
+      tags: ["#ism", "#ism-code", "#iso-9001"],
+      category: "compliance",
+    },
+
+    my_notes: {
+      background: "bg-green-50",
+      textColor: "text-dark",
+      shortTitle: "MyNotes",
+      icon: myNotesIcon,
+      title: "MyNotes",
+      url: "https://my-notes.rayakreasi.xyz/",
+      description:
+        "My Notes adalah sebuah platform Manajemen Project, dimana sebelumnya MyNotes adalah submodule di Sistem Manajemen Request IT",
+      tags: ["#Reminder", "#my-notes"],
+      category: "produktivitas",
+    },
+
+    sifaktur: {
+      background: "bg-purple-50",
+      textColor: "text-dark",
+      shortTitle: "SIFAKTUR",
+      icon: sifakturIcon,
+      title: "SIFAKTUR",
+      url: "https://na-konsultan.com/",
+      description:
+        "SIFAKTUR adalah Sistem Informasi untuk customer TMS-GROUP untuk pengambilan faktur pajak secara online.",
+      tags: ["#pajak", "#faktur", "#ppn"],
+      category: "administrasi",
+    },
+
+    sidoxim: {
+      background: "bg-red-300",
+      textColor: "text-dark",
+      shortTitle: "SIDOXIM",
+      title: "SIDOXIM",
+      url: "https://sidoxim.rayakreasi.xyz",
+      description: "SIDOXIM adalah Sistem Informasi untuk pengolahan dokumen kepabeanan (CUSTOM) a.k.a Bea Cukai, dan EXIM ",
+      tags: ["#sidoxim", "#exim", "#bea-cukai", "#manifest"],
+      category: "operasional",
+    },
+
+    sidocim: {
+      background: "bg-green-300",
+      textColor: "text-dark",
+      shortTitle: "SIDOCIM",
+      title: "SIDOCIM",
+      url: "https://sidocim.rayakreasi.xyz",
+      description: "SIDOCIM adalah Sistem Informasi untuk customer TMS-GROUP untuk Departemen Import. Fokusnya adalah D.O (Delivery Order) Online ke Customer dan Pelabuhan ",
+      tags: ["#sidocim", "#impor", "#do", "#do-online"],
+      category: "operasional",
+    },
+
+    tech_dzil: {
+      background: "bg-pink-300",
+      textColor: "text-dark",
+      shortTitle: "TECH DZIL",
+      title: "TECH DZIL",
+      url: "https://dzil.my.id/",
+      description: "Blog tentang pemrogaman, share pengalaman dan best practice milik penulis.",
+      tags: ["#blog", "#tech", "#dzil"],
+      category: "eksternal",
+    },
+
+    jp_finance: {
+      background: "bg-blue-300",
+      textColor: "text-dark",
+      shortTitle: "Tsurumaru",
+      title: "Tsurumaru Logistics Indonesia",
+      url: "https://backend-tsurumaru.rayakreasi.xyz",
+      description: "Web app untuk proses bisnis milik Tsurumaru Logistic Indonesia",
+      tags: ["#tsurumaru", "#quotation", "#general-cargo"],
+      category: "operasional",
+    },
+
+    bi_tms: {
+      background: "bg-purple-300",
+      textColor: "text-dark",
+      shortTitle: "BI-TMS",
+      title: "BI-TMS",
+      url: "http://bi.rayakreasi.xyz",
+      description:
+          "Business Intelligence System. Web Scrapping, merging, or anything about data processing here. ",
+      tags: ["#BI", "#Data", "#TMS"],
+      category: "analytics",
+    },
 
     ift: {
       background: "bg-pink-50",
@@ -51,66 +172,7 @@ function Home() {
       tags: ["#indoformosa", "#Trading", "#IFT"],
       category: "operasional",
     },
-    mkt: {
-      background: "bg-yellow-50",
-      textColor: "text-dark",
-      shortTitle: "SIMKT",
-      title: "SIMKT",
-      icon: simktIcon,
-      url: "https://mkt.rayakreasi.xyz/",
-      description:
-        "SIMKT adalah singkatan dari Sistem Informasi Marketing, dibuat untuk membantu Proses Bisnis di internal Departemen Sales dan Marketing - TMS GROUP. ",
-      tags: ["#marketing", "#sales"],
-      category: "manajemen",
-    },
-    hrd: {
-      background: "bg-slate-50",
-      textColor: "text-dark",
-      shortTitle: "SIHRD",
-      title: "SIHRD",
-      icon: sihrdIcon,
-      url: "https://hrd.rayakreasi.xyz/",
-      description:
-        "Sistem Informasi untuk pengelolaan Human Resource Development di dalam sebuah perusahaan / unit usaha.",
-      tags: ["#humanResource", "#absensi"],
-      category: "manajemen",
-    },
-    ism: {
-      background: "bg-red-50",
-      textColor: "text-dark",
-      shortTitle: "Certification",
-      title: "Certification",
-      icon: certificationIcon,
-      url: "https://certification.rayakreasi.xyz/",
-      description:
-        "Sistem Informasi untuk management certification milik TMS GROUP, seperti ISM-CODE, ISO-9001, dan lain-lain.",
-      tags: ["#ism", "#ism-code", "#iso-9001"],
-      category: "compliance",
-    },
-    my_notes: {
-      background: "bg-green-50",
-      textColor: "text-dark",
-      shortTitle: "MyNotes",
-      icon: myNotesIcon,
-      title: "MyNotes",
-      url: "https://my-notes.rayakreasi.xyz/",
-      description:
-        "My Notes adalah sebuah platform Manajemen Project, dimana sebelumnya MyNotes adalah submodule di Sistem Manajemen Request IT",
-      tags: ["#Reminder", "#my-notes"],
-      category: "produktivitas",
-    },
-    sifaktur: {
-      background: "bg-purple-50",
-      textColor: "text-dark",
-      shortTitle: "SIFAKTUR",
-      icon: sifakturIcon,
-      title: "SIFAKTUR",
-      url: "https://na-konsultan.com/",
-      description:
-        "SIFAKTUR adalah Sistem Informasi untuk customer TMS-GROUP untuk pengambilan faktur pajak secara online.",
-      tags: ["#pajak", "#faktur", "#ppn"],
-      category: "administrasi",
-    },
+
     rkd_mobile: {
       background: "bg-cyan-50",
       textColor: "text-dark",
@@ -122,57 +184,6 @@ function Home() {
       description: "Aplikasi Android RKD Mobile untuk akses layanan RKD via smartphone.",
       tags: ["#android", "#mobile", "#rkd"],
       category: "eksternal",
-    },
-    sidocim: {
-      background: "bg-green-300",
-      textColor: "text-dark",
-      shortTitle: "SIDOCIM",
-      title: "SIDOCIM",
-      url: "https://sidocim.rayakreasi.xyz",
-      description: "SIDOCIM adalah Sistem Informasi untuk customer TMS-GROUP untuk Departemen Import. Fokusnya adalah D.O (Delivery Order) Online ke Customer dan Pelabuhan ",
-      tags: ["#sidocim", "#impor", "#do", "#do-online"],
-      category: "operasional",
-    },
-    sidoxim: {
-      background: "bg-red-300",
-      textColor: "text-dark",
-      shortTitle: "SIDOXIM",
-      title: "SIDOXIM",
-      url: "https://sidoxim.rayakreasi.xyz",
-      description: "SIDOXIM adalah Sistem Informasi untuk pengolahan dokumen kepabeanan (CUSTOM) a.k.a Bea Cukai, dan EXIM ",
-      tags: ["#sidoxim", "#exim", "#bea-cukai", "#manifest"],
-      category: "operasional",
-    },
-    tech_dzil: {
-      background: "bg-pink-300",
-      textColor: "text-dark",
-      shortTitle: "TECH DZIL",
-      title: "TECH DZIL",
-      url: "https://dzil.my.id/",
-      description: "Blog tentang pemrogaman, share pengalaman dan best practice milik penulis.",
-      tags: ["#blog", "#tech", "#dzil"],
-      category: "eksternal",
-    },
-    jp_finance: {
-      background: "bg-blue-300",
-      textColor: "text-dark",
-      shortTitle: "Tsurumaru",
-      title: "Tsurumaru Logistics Indonesia",
-      url: "https://backend-tsurumaru.rayakreasi.xyz",
-      description: "Web app untuk proses bisnis milik Tsurumaru Logistic Indonesia",
-      tags: ["#tsurumaru", "#quotation", "#general-cargo"],
-      category: "operasional",
-    },
-    bi_tms: {
-      background: "bg-purple-300",
-      textColor: "text-dark",
-      shortTitle: "BI-TMS",
-      title: "BI-TMS",
-      url: "http://bi.rayakreasi.xyz",
-      description:
-          "Business Intelligence System. Web Scrapping, merging, or anything about data processing here. ",
-      tags: ["#BI", "#Data", "#TMS"],
-      category: "analytics",
     },
 
   };
